@@ -111,7 +111,7 @@ def refin_default_firms(f_ids, n_refin, equity_mat, f_float_mat, h_float_mat, de
 
 
 def end_of_period(n_refin, f_float_mat, f_ids, emp_mat, h_ids, H, h_float_mat, default_arr,
-                  h_bool_mat, fired_time, data_mat, t, skill_mat, f_int_mat, tol):
+                  h_bool_mat, fired_time, data_mat, t, skill_mat, tol, w_dist_mat):
 
     # firms and households update liquid assets
     update_Af(f_float_mat)
@@ -120,8 +120,7 @@ def end_of_period(n_refin, f_float_mat, f_ids, emp_mat, h_ids, H, h_float_mat, d
     # defaulted firms loos employees
     def_firms_loose_employeees(default_arr, emp_mat, h_float_mat, h_bool_mat, fired_time)
     # collect data
-    data_collector(n_refin, t, H, data_mat, emp_mat, f_float_mat, h_float_mat,
-                   default_arr, skill_mat)
+    data_collector(n_refin, t, H, data_mat, emp_mat, f_float_mat, h_float_mat, default_arr, skill_mat, w_dist_mat)
 
     # print("p_h - p_h_hat: {}".format(np.sum((h_float_mat[2] - h_float_mat[3]) > 0)))
 
@@ -129,10 +128,9 @@ def end_of_period(n_refin, f_float_mat, f_ids, emp_mat, h_ids, H, h_float_mat, d
 def step_function(alpha_1, alpha_2, F, H, f_float_mat, f_int_mat, h_float_mat, h_bool_mat,
                   default_arr, fired_time, emp_mat, skill_mat, min_w_par, lambda_F, lambda_H, mu_u,
                   mu_s, nu, eta, sigma_m, sigma_w, sigma_delta, equity_mat, tol, n_refin,
-                  f_ids, h_ids, data_mat, t, N_app, N_good, lambda_LM, A_f):
+                  f_ids, h_ids, data_mat, t, N_app, N_good, lambda_LM, A_f, w_dist_mat):
 
     beginning_of_period(fired_time, emp_mat, h_float_mat, h_bool_mat, f_int_mat, skill_mat, default_arr)
-
     emp_arr = np.sum(emp_mat, axis=0, dtype=np.bool)
     min_w = min_w_par*np.median(h_float_mat[0, emp_arr])
     # update all wages
@@ -154,14 +152,14 @@ def step_function(alpha_1, alpha_2, F, H, f_float_mat, f_int_mat, h_float_mat, h
     default_arr[:] = f_float_mat[16] + f_float_mat[13] < 0
     refin_default_firms(f_ids, n_refin, equity_mat, f_float_mat, h_float_mat, default_arr, emp_mat, t, A_f)
 
-    end_of_period(n_refin, f_float_mat, f_ids, emp_mat, h_ids, H, h_float_mat, default_arr,
-                  h_bool_mat, fired_time, data_mat, t, skill_mat, f_int_mat, tol)
+    end_of_period(n_refin, f_float_mat, f_ids, emp_mat, h_ids, H, h_float_mat, default_arr, h_bool_mat, fired_time,
+                  data_mat, t, skill_mat, tol, w_dist_mat)
 
 
 def run(T = 1000, alpha_2 = 0.25, N_good = 12, m = 0.1, delta = 1, lambda_LM = 10,
-        sigma_m = 0.35, sigma_w = 0.4, sigma_delta = 0.0001, nu = 0.1, u_r = 0.08, lambda_F = 0.5, lambda_H = 1.0, F = 160, H = 1000,
-        N_app = 4, eta = 1.5, mu_u = 0.4, gamma_s = 0.4, min_w_par = 1e-14, W_u = 1,
-        Ah = 1, tol = 1e-14):
+        sigma_m = 0.35, sigma_w = 0.4, sigma_delta = 0.0001, nu = 0.1, u_r = 0.08, lambda_F = 0.5, lambda_H = 1.0,
+        F = 160, H = 1000, N_app = 4, eta = 1.5, mu_u = 0.4, gamma_s = 0.4, min_w_par = 1e-14, d_min_w_par = 0.1,
+        change_t = 500, W_u = 1, Ah = 1, tol = 1e-14):
 
     mu_s, W_s, Af, uc, p, y_f, pi_f, div_h, div_f, c, alpha_1 = calibrate_model(H, F, Ah, u_r, mu_u, W_u,
                                                                                 gamma_s, m, eta, delta, alpha_2)
@@ -172,6 +170,7 @@ def run(T = 1000, alpha_2 = 0.25, N_good = 12, m = 0.1, delta = 1, lambda_LM = 1
     f_ids, h_ids = np.arange(F), np.arange(H)
     # Data-Matrix
     data_mat = np.zeros((23, T))
+    w_dist_mat = np.zeros((T, H))
     # firm data
     default_arr = np.full(F, 0, dtype = np.bool)
     f_int_mat = np.zeros((6, F), dtype=np.int64)
@@ -204,11 +203,13 @@ def run(T = 1000, alpha_2 = 0.25, N_good = 12, m = 0.1, delta = 1, lambda_LM = 1
 
 
     for t in range(T):
+        if t == change_t:
+            min_w_par = (1+d_min_w_par)*min_w_par
         step_function(alpha_1, alpha_2, F, H, f_float_mat, f_int_mat, h_float_mat, h_bool_mat, default_arr, fired_time,
-                      emp_mat, skill_mat, min_w_par, lambda_F, lambda_H, mu_u, mu_s, nu, eta, sigma_m,
-                      sigma_w, sigma_delta, equity_mat, tol, n_refin, f_ids, h_ids, data_mat, t, N_app, N_good,
-                      lambda_LM, Af)
+                      emp_mat, skill_mat, min_w_par, lambda_F, lambda_H, mu_u, mu_s, nu, eta, sigma_m, sigma_w,
+                      sigma_delta, equity_mat, tol, n_refin, f_ids, h_ids, data_mat, t, N_app, N_good, lambda_LM, Af,
+                      w_dist_mat)
 
 
     # return data_mat[:,-periods:].mean(axis=1)
-    return data_mat
+    return data_mat, w_dist_mat

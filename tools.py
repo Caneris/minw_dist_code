@@ -19,7 +19,6 @@ def set_seed(seed):
 
     rd.seed(seed)
 
-
 def expectation(z, z_e, lambda_exp):
     """
     This function returns the expected value for the

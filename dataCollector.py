@@ -10,10 +10,13 @@ def get_gini(wages):
 
 
 def data_collector(n_refin, t, H, data_mat, emp_mat, f_float_mat, h_float_mat,
-                   default_arr, skill_mat):
-    # collect GDP, Uneployment rate, mean wages
+                   default_arr, skill_mat, w_dist_mat):
+
+    # collect GDP, Unemployment rate, mean wages
     # open vacancies, share of defaulted firms, decile rations,
     # mean markups, aggregate consumption etc.
+
+
     active_arr = np.invert(default_arr)
 
     m_w = h_float_mat[0] > 0
@@ -31,6 +34,8 @@ def data_collector(n_refin, t, H, data_mat, emp_mat, f_float_mat, h_float_mat,
     data_mat[2, t] = Y
     # mean prices
     data_mat[3, t] = data_mat[1, t]/Y # GDP/produced goods
+    # wage distribution
+    w_dist_mat[t, :] = h_float_mat[0]
     # mean nominal wages
     data_mat[4, t] = wages.mean()
     # median real wages
