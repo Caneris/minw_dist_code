@@ -706,3 +706,19 @@ def def_firms_loose_employeees(default_arr, emp_mat, h_float_mat, h_bool_mat,
             wages[emp_ids] = 0.0
             job_offers[emp_ids] = False
             fired_time[emp_ids] = 0
+
+
+# get quantiles
+def get_q_vals(q_arr, w_dist_mat):
+    T = w_dist_mat.shape[0]
+    q_mat = np.zeros((T, q_arr.size))
+    for t in range(T):
+        w_arr = w_dist_mat[t, :]
+        w_dist = np.log(w_arr[w_arr>0])
+        q_mat[t, :] = [np.quantile(w_dist, q) for q in q_arr]
+    return q_mat
+
+def get_q_vals2(q_arr, w_dist_mean):
+    w_dist_mean = np.log(w_dist_mean[w_dist_mean>0])
+    q_vals = np.array([np.quantile(w_dist_mean, q) for q in q_arr])
+    return q_vals
