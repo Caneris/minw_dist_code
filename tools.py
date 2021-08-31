@@ -715,7 +715,7 @@ def get_q_vals(q_arr, w_dist_mat):
     for t in range(T):
         w_arr = w_dist_mat[t, :]
         w_dist = np.log(w_arr[w_arr>0])
-        q_mat[t, :] = [np.quantile(w_dist, q) for q in q_arr]
+        q_mat[t, :] = [np.quantile(w_dist, q, interpolation='lower') for q in q_arr]
     return q_mat
 
 def get_q_vals2(q_arr, w_dist_mean):
