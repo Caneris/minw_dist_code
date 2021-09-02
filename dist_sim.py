@@ -32,7 +32,6 @@ results = np.zeros((d_mwp_arr.size, n_sim, q_arr.size))
 # plt.show()
 
 
-
 def run_model(arg):
     q_arr, T, lambda_LM, sigma_m, sigma_w, eta, min_w_par, d_mwp, change_t = arg
 
@@ -45,30 +44,33 @@ def run_model(arg):
     q_vals = q_mat[-400:, :].mean(axis=0)
     return q_vals
 
+
 def run_mp(args):
     with concurrent.futures.ProcessPoolExecutor() as executor:
         X = np.array(list(executor.map(run_model, args)))
-    q_mean = X.mean(axis=0)
-    return q_mean
+    q_vals_mat = X
+    return q_vals_mat
 
 args = [(123456, 1000, 5, 0.35, 0.4, 1.5, 0.4, 0.0, 600) for i in range(n_sim)]
 
 if __name__ == '__main__':
-    n_sim = 50
+    n_sim = 3
     seed = 123456
     d_mwp_arr = np.array([0.0, 0.1])
     q_arr = np.linspace(0.0, 1.0, 101)
-    results = np.zeros((d_mwp_arr.size, q_arr.size))
+    results = np.zeros((d_mwp_arr.size, n_sim, q_arr.size))
     for i in range(d_mwp_arr.size):
         rd.seed(seed)
         set_seed(seed)
         args = [(q_arr, 1000, 10, 0.35, 0.4, 1.5, 0.4+d_mwp_arr[i], 0.0, 600) for j in range(n_sim)]
-        q_mean = run_mp(args)
-        results[i, :] = q_mean
+        q_vals_mat = run_mp(args)
+        results[i, :, :] = q_vals_mat
 
-    diff = results[1,:] - results[0,:]
-    plt.plot(diff)
-    plt.show()
-    with open('quantile_diff.csv', 'w', newline = '') as csvfile:
-        filewriter = csv.writer(csvfile, delimiter = ',')
-        filewriter.writerow(diff)
+    print(results)
+
+    # diff = results[1,:] - results[0,:]
+    # plt.plot(diff)
+    # plt.show()
+    # with open('quantile_diff.csv', 'w', newline = '') as csvfile:
+    #     filewriter = csv.writer(csvfile, delimiter = ',')
+    #     filewriter.writerow(diff)
