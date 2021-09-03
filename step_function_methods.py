@@ -158,8 +158,7 @@ def step_function(alpha_1, alpha_2, F, H, f_float_mat, f_int_mat, h_float_mat, h
 
 def run(T = 1000, alpha_2 = 0.25, N_good = 12, m = 0.1, delta = 1, lambda_LM = 10,
         sigma_m = 0.35, sigma_w = 0.4, sigma_delta = 0.0001, nu = 0.1, u_r = 0.08, lambda_F = 0.5, lambda_H = 1.0,
-        F = 160, H = 1000, N_app = 4, eta = 1.5, mu_u = 0.4, gamma_s = 0.4, min_w_par = 1e-14, d_min_w_par = 0.1,
-        change_t = 500, W_u = 1, Ah = 1, tol = 1e-14):
+        F = 160, H = 1000, N_app = 4, eta = 1.5, mu_u = 0.4, gamma_s = 0.4, min_w_par = 1e-14, W_u = 1, Ah = 1, tol = 1e-14):
 
     mu_s, W_s, Af, uc, p, y_f, pi_f, div_h, div_f, c, alpha_1 = calibrate_model(H, F, Ah, u_r, mu_u, W_u,
                                                                                 gamma_s, m, eta, delta, alpha_2)
@@ -203,8 +202,6 @@ def run(T = 1000, alpha_2 = 0.25, N_good = 12, m = 0.1, delta = 1, lambda_LM = 1
 
 
     for t in range(T):
-        if t == change_t:
-            min_w_par = (1+d_min_w_par)*min_w_par
         step_function(alpha_1, alpha_2, F, H, f_float_mat, f_int_mat, h_float_mat, h_bool_mat, default_arr, fired_time,
                       emp_mat, skill_mat, min_w_par, lambda_F, lambda_H, mu_u, mu_s, nu, eta, sigma_m, sigma_w,
                       sigma_delta, equity_mat, tol, n_refin, f_ids, h_ids, data_mat, t, N_app, N_good, lambda_LM, Af,

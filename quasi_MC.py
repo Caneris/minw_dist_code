@@ -21,14 +21,14 @@ def run_model(arg):
     for n in range(nSim):
         print("Simulation #{}".format(sim_num*nSim + n + 1))
         data_mat = run(alpha_2=alpha_2, lambda_LM=lambda_LM, sigma_m=sigma_m, sigma_w=sigma_w, sigma_delta=sigma_delta,
-                       lambda_exp=lambda_exp, N_app=N_app)
+                       N_app=N_app)
         data = data_mat[[0, 3, 17], -200:].mean(axis=1)
         results[n, :] = data
 
     for n in range(nSim):
         print("Simulation #{}".format(sim_num*nSim + n + 1))
         data_mat = run(alpha_2=alpha_2, N_good=6, lambda_LM=lambda_LM, sigma_m=sigma_m, sigma_w=sigma_w,
-                       sigma_delta=sigma_delta, lambda_exp=lambda_exp, N_app=N_app)
+                       sigma_delta=sigma_delta, N_app=N_app)
         price_mean2 = data_mat[[3, 17], -200:].mean(axis=1)
         results[n, [1,2]] -= price_mean2
     result = results.mean(axis=0)
