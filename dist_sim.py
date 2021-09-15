@@ -5,7 +5,7 @@ import concurrent.futures
 import csv
 
 if __name__ == '__main__':
-    n_sim = 50
+    n_sim = 100
     seed = 123456
     T = 1000
     lambda_LM_arr = np.array([1, 2.5, 5, 7.5, 10, 12.5, 15])
@@ -23,7 +23,7 @@ if __name__ == '__main__':
         csv_name = csv_names[i]
         parvals = par_vals_list[i]
         for parval in parvals:
-
+            print("start {} simulations for {} = {} ....".format(n_sim, csv_name, parval))
             results = counterfact_sim(seed, i, d_mwp_arr, n_sim, q_arr, T, parval)
             diff = results[1,:, :] - results[0,:, :]
             diff = np.insert(diff, 0, parval, axis=1)
