@@ -15,18 +15,20 @@ def run_model(arg):
 
 def run_mp(args):
     with concurrent.futures.ProcessPoolExecutor() as executor:
-        mean_d, q = np.array(list(executor.map(run_model, args)))
-    q_vals_mat = q
-    mean_data_mat = mean_d
-    return mean_data_mat, q_vals_mat
+        X = np.array(list(executor.map(run_model, args)), dtype=object)
+    data = X
+    X1 = np.stack(data[:, 0], axis=0)
+    X2 = np.stack(data[:, 1], axis=0)
+    return X1, X2
 
 def counterfact_sim(seed, ID, d_mwp_arr, n_sim, q_arr, T, parval):
     results1 = np.zeros((d_mwp_arr.size, n_sim, q_arr.size)) # qvals
-    results2 = np.zeros((d_mwp_arr.size, 23, n_sim)) # mean_data
+    results2 = np.zeros((d_mwp_arr.size, n_sim, 23)) # mean_data
     for i in range(d_mwp_arr.size):
         rd.seed(seed)
         set_seed(seed)
         args = [(ID, q_arr, T, d_mwp_arr[i], parval) for j in range(n_sim)]
         mean_data_mat, q_vals_mat = run_mp(args)
         results1[i, :, :] = q_vals_mat
+        results2[i, :, :] = mean_data_mat
     return results1, results2
