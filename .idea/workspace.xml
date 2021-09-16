@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e26aecd8-37b4-4684-8c59-54dbe3e03353" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/dist_sim.py" beforeDir="false" afterPath="$PROJECT_DIR$/dist_sim.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist_sim_tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/dist_sim_tools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/step_function_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/step_function_methods.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
+  <component name="ProjectId" id="1xB74LwgcpNyADQgq1nJ34fvgdZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Program Files/Anaconda3/envs/minw_dist_code/python.exe" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\atecan00\Documents\minw_dist_code" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="dist_sim" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="minw_dist_code" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dist_sim.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.dist_sim" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e26aecd8-37b4-4684-8c59-54dbe3e03353" name="Default Changelist" comment="" />
+      <created>1629816436072</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1629816436072</updated>
+      <workItem from="1629816437206" duration="1546000" />
+      <workItem from="1629894711877" duration="1252000" />
+      <workItem from="1629896116831" duration="3579000" />
+      <workItem from="1629984294981" duration="637000" />
+      <workItem from="1629984946049" duration="94000" />
+      <workItem from="1629985054504" duration="266000" />
+      <workItem from="1629985330384" duration="97000" />
+      <workItem from="1629985451595" duration="23000" />
+      <workItem from="1629986185125" duration="65000" />
+      <workItem from="1629986269503" duration="21000" />
+      <workItem from="1629986304555" duration="5754000" />
+      <workItem from="1630326967511" duration="26000000" />
+      <workItem from="1630583832734" duration="3258000" />
+      <workItem from="1630669272284" duration="12282000" />
+      <workItem from="1631536914206" duration="1243000" />
+      <workItem from="1631708764972" duration="4125000" />
+      <workItem from="1631717486752" duration="629000" />
+      <workItem from="1631718594286" duration="134000" />
+      <workItem from="1631792634699" duration="172000" />
+      <workItem from="1631793179828" duration="133000" />
+      <workItem from="1631795085603" duration="56000" />
+      <workItem from="1631796317322" duration="6503000" />
+    </task>
+    <task id="LOCAL-00001" summary="simulate distributional effects">
+      <created>1629895993955</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1629895993955</updated>
+    </task>
+    <task id="LOCAL-00002" summary="simulate distributional effects">
+      <created>1629899709644</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1629899709644</updated>
+    </task>
+    <task id="LOCAL-00003" summary="simulate distributional effects">
+      <created>1629985031793</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1629985031793</updated>
+    </task>
+    <task id="LOCAL-00004" summary="simulate distributional effects">
+      <created>1629986491197</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1629986491197</updated>
+    </task>
+    <task id="LOCAL-00005" summary="simulate distributional effects">
+      <created>1629986526202</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1629986526202</updated>
+    </task>
+    <task id="LOCAL-00006" summary="simulate distributional effects">
+      <created>1629994278634</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1629994278634</updated>
+    </task>
+    <task id="LOCAL-00007" summary="simulate distributional effects">
+      <created>1630428253523</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1630428253523</updated>
+    </task>
+    <task id="LOCAL-00008" summary="simulate distributional effects">
+      <created>1630505357737</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1630505357737</updated>
+    </task>
+    <task id="LOCAL-00009" summary="simulate distributional effects">
+      <created>1630589240426</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1630589240426</updated>
+    </task>
+    <task id="LOCAL-00010" summary="simulate distributional effects">
+      <created>1630679946060</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1630679946060</updated>
+    </task>
+    <task id="LOCAL-00011" summary="set up experiments">
+      <created>1631025905554</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1631025905554</updated>
+    </task>
+    <task id="LOCAL-00012" summary="change_t">
+      <created>1631712507910</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1631712507910</updated>
+    </task>
+    <task id="LOCAL-00013" summary="change_t">
+      <created>1631712548678</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1631712548678</updated>
+    </task>
+    <task id="LOCAL-00014" summary="change_t">
+      <created>1631717598957</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1631717598957</updated>
+    </task>
+    <task id="LOCAL-00015" summary="set up experiments">
+      <created>1631802761865</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1631802761865</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="simulate distributional effects" />
+    <MESSAGE value="change_t" />
+    <MESSAGE value="set up experiments" />
+    <option name="LAST_COMMIT_MESSAGE" value="set up experiments" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/minw_dist_code$dist_sim.coverage" NAME="dist_sim Coverage Results" MODIFIED="1631805721278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
