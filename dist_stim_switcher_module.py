@@ -1,27 +1,27 @@
 from step_function_methods import run
 
 def ID0(T, d_mwp, par_val):
-    data_mat, w_dist_mat = run(T=T, lambda_LM=par_val, min_w_par=0.4, d_mwp = d_mwp)
+    data_mat, w_dist_mat = run(T=T, lambda_LM=par_val, min_w_par=0.4, d_mwp=d_mwp)
     return data_mat, w_dist_mat
 
 def ID1(T, d_mwp, par_val):
-    data_mat, w_dist_mat = run(T=T, min_w_par=par_val, d_mwp = d_mwp)
+    data_mat, w_dist_mat = run(T=T, min_w_par=par_val, d_mwp=d_mwp)
     return data_mat, w_dist_mat
 
 def ID2(T, d_mwp, par_val):
-    data_mat, w_dist_mat = run(T=T, sigma_w=par_val, min_w_par=0.4, d_mwp = d_mwp)
+    data_mat, w_dist_mat = run(T=T, sigma_w=par_val, min_w_par=0.4, d_mwp=d_mwp)
     return data_mat, w_dist_mat
 
 def ID3(T, d_mwp, par_val):
-    data_mat, w_dist_mat = run(T=T, sigma_m=par_val, min_w_par=0.4, d_mwp = d_mwp)
+    data_mat, w_dist_mat = run(T=T, sigma_m=par_val, min_w_par=0.4, d_mwp=d_mwp)
     return data_mat, w_dist_mat
 
 def ID4(T, d_mwp, par_val):
-    data_mat, w_dist_mat = run(T=T, N_app=par_val, min_w_par=0.4, d_mwp = d_mwp)
+    data_mat, w_dist_mat = run(T=T, N_app=par_val, min_w_par=0.4, d_mwp=d_mwp)
     return data_mat, w_dist_mat
 
 def ID5(T, d_mwp, par_val):
-    data_mat, w_dist_mat = run(T=T, N_good=par_val, min_w_par=0.4, d_mwp = d_mwp)
+    data_mat, w_dist_mat = run(T=T, N_good=par_val, min_w_par=0.4, d_mwp=d_mwp)
     return data_mat, w_dist_mat
 
 switcher = {

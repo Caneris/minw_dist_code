@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e26aecd8-37b4-4684-8c59-54dbe3e03353" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/dist_sim.py" beforeDir="false" afterPath="$PROJECT_DIR$/dist_sim.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist_sim_tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/dist_sim_tools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist_stim_switcher_module.py" beforeDir="false" afterPath="$PROJECT_DIR$/dist_stim_switcher_module.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/step_function_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/step_function_methods.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,8 +35,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Program Files/Anaconda3/envs/minw_dist_code/python.exe" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -101,7 +101,12 @@
       <workItem from="1631792634699" duration="172000" />
       <workItem from="1631793179828" duration="133000" />
       <workItem from="1631795085603" duration="56000" />
-      <workItem from="1631796317322" duration="6503000" />
+      <workItem from="1631796317322" duration="7446000" />
+      <workItem from="1631883542866" duration="1352000" />
+      <workItem from="1632141274325" duration="1204000" />
+      <workItem from="1632323767096" duration="1394000" />
+      <workItem from="1632491955425" duration="59000" />
+      <workItem from="1633356105479" duration="1655000" />
     </task>
     <task id="LOCAL-00001" summary="simulate distributional effects">
       <created>1629895993955</created>
@@ -208,7 +213,21 @@
       <option name="project" value="LOCAL" />
       <updated>1631802761865</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="finished setting up experiments for the simulation of all data">
+      <created>1631806103100</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1631806103100</updated>
+    </task>
+    <task id="LOCAL-00017" summary="finished setting up experiments for the simulation of all data">
+      <created>1631806327000</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1631806327000</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,9 +237,10 @@
     <MESSAGE value="simulate distributional effects" />
     <MESSAGE value="change_t" />
     <MESSAGE value="set up experiments" />
-    <option name="LAST_COMMIT_MESSAGE" value="set up experiments" />
+    <MESSAGE value="finished setting up experiments for the simulation of all data" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished setting up experiments for the simulation of all data" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/minw_dist_code$dist_sim.coverage" NAME="dist_sim Coverage Results" MODIFIED="1631805721278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/minw_dist_code$dist_sim.coverage" NAME="dist_sim Coverage Results" MODIFIED="1633356343772" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

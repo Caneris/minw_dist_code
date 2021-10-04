@@ -158,7 +158,7 @@ def step_function(alpha_1, alpha_2, F, H, f_float_mat, f_int_mat, h_float_mat, h
 
 def run(T = 1000, alpha_2 = 0.25, N_good = 6, m = 0.1, delta = 1, lambda_LM = 10,
         sigma_m = 0.35, sigma_w = 0.4, sigma_delta = 0.0001, nu = 0.1, u_r = 0.08, lambda_F = 0.5, lambda_H = 1.0,
-        F = 40, H = 250, N_app = 6, eta = 1.5, mu_u = 0.4, gamma_s = 0.4, min_w_par = 0.4, W_u = 1, Ah = 1, tol = 1e-14,
+        F = 40, H = 250, N_app = 6, eta = 0.5, mu_u = 0.4, gamma_s = 0.4, min_w_par = 0.4, W_u = 1, Ah = 1, tol = 1e-14,
         change_t = 500, d_mwp = 0.0):
 
     mu_s, W_s, Af, uc, p, y_f, pi_f, div_h, div_f, c, alpha_1 = calibrate_model(H, F, Ah, u_r, mu_u, W_u,
