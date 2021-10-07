@@ -4,21 +4,22 @@ import time
 
 T = 1000
 periods = T
-H = 1000
+H = 250
+change_t = 500
 
 q_arr = np.linspace(0.01, 1.0, 100)
-d_mwp_arr = np.array([0.0, 0.2])
+d_mwp_arr = np.array([0.0, 0.6])
 results = np.zeros((2, q_arr.size))
 
 start = time.time()
 
 for i in range(d_mwp_arr.size):
-    seed = 12312
+    seed = 1231
     rd.seed(seed)
     set_seed(seed)
     data_mat, w_dist_mat = run(T=T, alpha_2=0.25, N_good=6, lambda_LM=10, sigma_m=0.35, sigma_w=0.40,
-                               sigma_delta=0.0001, lambda_F=0.5, lambda_H=1.0, F=160, H=H, N_app=6, eta=1.5,
-                               min_w_par=0.4, W_u=1, Ah=1, tol=1e-14, change_t=500, d_mwp=d_mwp_arr[i])
+                               sigma_delta=0.1, lambda_F=0.5, lambda_H=1.0, F=40, H=H, N_app=6, eta=1.5,
+                               min_w_par=1e-14, W_u=1, Ah=1, tol=1e-14, change_t=change_t, d_mwp=d_mwp_arr[i])
 
     q_mat = get_q_vals(q_arr, w_dist_mat)
     q_vals = q_mat[-100:,:].mean(axis=0)

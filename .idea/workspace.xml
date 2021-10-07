@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e26aecd8-37b4-4684-8c59-54dbe3e03353" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist_stim_switcher_module.py" beforeDir="false" afterPath="$PROJECT_DIR$/dist_stim_switcher_module.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/step_function_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/step_function_methods.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +105,8 @@
       <workItem from="1632141274325" duration="1204000" />
       <workItem from="1632323767096" duration="1394000" />
       <workItem from="1632491955425" duration="59000" />
-      <workItem from="1633356105479" duration="1655000" />
+      <workItem from="1633356105479" duration="1709000" />
+      <workItem from="1633532921836" duration="2132000" />
     </task>
     <task id="LOCAL-00001" summary="simulate distributional effects">
       <created>1629895993955</created>
@@ -227,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631806327000</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="finished setting up experiments for the simulation of all data">
+      <created>1633358396180</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1633358396180</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
