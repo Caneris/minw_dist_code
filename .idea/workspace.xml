@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e26aecd8-37b4-4684-8c59-54dbe3e03353" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist_sim.py" beforeDir="false" afterPath="$PROJECT_DIR$/dist_sim.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist_sim_tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/dist_sim_tools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist_stim_switcher_module.py" beforeDir="false" afterPath="$PROJECT_DIR$/dist_stim_switcher_module.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/step_function_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/step_function_methods.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +107,7 @@
       <workItem from="1632491955425" duration="59000" />
       <workItem from="1633356105479" duration="1709000" />
       <workItem from="1633532921836" duration="2742000" />
-      <workItem from="1639491052262" duration="2984000" />
+      <workItem from="1639491052262" duration="3227000" />
     </task>
     <task id="LOCAL-00001" summary="simulate distributional effects">
       <created>1629895993955</created>
@@ -251,7 +249,21 @@
       <option name="project" value="LOCAL" />
       <updated>1639493516107</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="set up simulations for different min_w_base values">
+      <created>1639494458491</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1639494458491</updated>
+    </task>
+    <task id="LOCAL-00022" summary="more households">
+      <created>1639494533682</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1639494533682</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,7 +276,9 @@
     <MESSAGE value="finished setting up experiments for the simulation of all data" />
     <MESSAGE value="try out stuff" />
     <MESSAGE value="added gamma_s_arr" />
-    <option name="LAST_COMMIT_MESSAGE" value="added gamma_s_arr" />
+    <MESSAGE value="set up simulations for different min_w_base values" />
+    <MESSAGE value="more households" />
+    <option name="LAST_COMMIT_MESSAGE" value="more households" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/minw_dist_code$dist_sim.coverage" NAME="dist_sim Coverage Results" MODIFIED="1633356343772" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
