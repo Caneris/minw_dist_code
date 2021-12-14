@@ -38,6 +38,6 @@ switcher = {
     6: ID6
 }
 
-def run_dist_sim_ID(ID, T, d_mwp, par_val):
+def run_dist_sim_ID(ID, T, d_mwp, par_val, min_w_base):
     func = switcher.get(ID, "no such ID...")
-    return func(T, d_mwp, par_val)
+    return func(T, d_mwp, par_val, min_w_base)
