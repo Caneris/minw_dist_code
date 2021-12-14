@@ -13,12 +13,13 @@ if __name__ == '__main__':
     sigma_w_arr = np.arange(0.25, 0.45, 0.05) # 0.4
     N_app_arr = np.arange(1, 10)
     N_good_arr = np.arange(1, 10)
+    gamma_s_arr = np.arange(0.2, 0.8, 0.1)
     eta = 1.5
     min_w_par_arr = np.array([1e-14, 0.2, 0.4, 0.6, 0.8, 0.9])
     d_mwp_arr = np.array([0.0, 0.1])
     q_arr = np.linspace(0.0, 1.0, 101)
-    csv_names = np.array(['lambda_LM', 'min_w_par', 'sigma_w', 'sigma_m', 'N_app', 'N_good'])
-    par_vals_list = [lambda_LM_arr, min_w_par_arr, sigma_w_arr, sigma_m_arr, N_app_arr, N_good_arr]
+    csv_names = np.array(['lambda_LM', 'min_w_par', 'sigma_w', 'sigma_m', 'N_app', 'N_good', 'gamma_s'])
+    par_vals_list = [lambda_LM_arr, min_w_par_arr, sigma_w_arr, sigma_m_arr, N_app_arr, N_good_arr, gamma_s_arr]
     for i in range(len(par_vals_list)):
         csv_name = csv_names[i]
         parvals = par_vals_list[i]
