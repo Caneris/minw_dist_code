@@ -7,7 +7,7 @@ import csv
 if __name__ == '__main__':
     n_sim = 20
     seed = 123456
-    T = 1000
+    T = 500
     min_w_base_arr = np.array([1e-14, 0.4])
     lambda_LM_arr = np.array([1, 2.5, 5, 7.5, 10, 12.5, 15])
     sigma_m_arr = np.arange(0.25, 0.45, 0.05) # 0.35
@@ -29,14 +29,9 @@ if __name__ == '__main__':
                 parvals = par_vals_list[i]
                 for parval in parvals:
                     print("start {} simulations for {} = {} ....".format(n_sim, csv_name, parval))
-                    results1, results2 = counterfact_sim(seed, i, d_mwp_arr, n_sim, q_arr, T, parval, min_w_base)
+                    results1 = counterfact_sim(seed, i, d_mwp_arr, n_sim, q_arr, T, parval, min_w_base)
                     diff = results1[1,:, :] - results1[0,:, :]
                     diff = np.insert(diff, 0, parval, axis=1)
-                    results2 = np.insert(results2, 0, parval, axis=2)
                     with open('dist_sim_results/dist_sim_qvals_{}_{}.csv'.format(csv_name, min_w_base_i), 'a', newline = '') as csvfile:
                         filewriter = csv.writer(csvfile, delimiter = ',')
                         filewriter.writerows(diff)
-                    for j in range(results2.shape[0]):
-                        with open('dist_sim_results/dist_sim_mean_data_{}_{}_{}.csv'.format(csv_name, j, min_w_base_i), 'a', newline = '') as csvfile:
-                            filewriter = csv.writer(csvfile, delimiter = ',')
-                            filewriter.writerows(results2[j, :, :])

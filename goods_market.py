@@ -43,7 +43,7 @@ def h_buy_goods(f_ids, supply, N_good, f_float_mat, h_float_mat, h_ids,
 
 
 @njit
-def goods_market_matching(h_float_mat, f_float_mat, h_ids, f_ids, N_good, tol, default_arr):
+def goods_market_matching(h_float_mat, f_float_mat, h_ids, f_ids, N_good, tol):
     """
     Runs goods market matching.
 

@@ -8,8 +8,8 @@ def run_model(arg):
     data_mat, w_dist_mat = run_dist_sim_ID(ID, T, d_mwp, parval, min_w_base)
 
     q_mat = get_q_vals(q_arr, w_dist_mat)
-    q_vals = q_mat[-400:, :].mean(axis=0)
-    mean_data = data_mat[:,-400:].mean(axis=1)
+    q_vals = q_mat[-100:, :].mean(axis=0)
+    mean_data = data_mat[:,-100:].mean(axis=1)
     return mean_data, q_vals
 
 
@@ -23,12 +23,10 @@ def run_mp(args):
 
 def counterfact_sim(seed, ID, d_mwp_arr, n_sim, q_arr, T, parval, min_w_base):
     results1 = np.zeros((d_mwp_arr.size, n_sim, q_arr.size)) # qvals
-    results2 = np.zeros((d_mwp_arr.size, n_sim, 23)) # mean_data
     for i in range(d_mwp_arr.size):
         rd.seed(seed)
         set_seed(seed)
         args = [(ID, q_arr, T, d_mwp_arr[i], parval, min_w_base) for j in range(n_sim)]
-        mean_data_mat, q_vals_mat = run_mp(args)
+        q_vals_mat = run_mp(args)
         results1[i, :, :] = q_vals_mat
-        results2[i, :, :] = mean_data_mat
-    return results1, results2
+    return results1
