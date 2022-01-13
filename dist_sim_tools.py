@@ -5,12 +5,11 @@ from dist_stim_switcher_module import run_dist_sim_ID
 def run_model(arg):
     ID, q_arr, T, d_mwp, parval, min_w_base = arg
 
-    data_mat, w_dist_mat = run_dist_sim_ID(ID, T, d_mwp, parval, min_w_base)
+    w_dist_mat = run_dist_sim_ID(ID, T, d_mwp, parval, min_w_base)
 
     q_mat = get_q_vals(q_arr, w_dist_mat)
     q_vals = q_mat[-100:, :].mean(axis=0)
-    mean_data = data_mat[:,-100:].mean(axis=1)
-    return mean_data, q_vals
+    return q_vals
 
 
 def run_mp(args):
@@ -18,8 +17,7 @@ def run_mp(args):
         X = np.array(list(executor.map(run_model, args)), dtype=object)
     data = X
     X1 = np.stack(data[:, 0], axis=0)
-    X2 = np.stack(data[:, 1], axis=0)
-    return X1, X2
+    return X1
 
 def counterfact_sim(seed, ID, d_mwp_arr, n_sim, q_arr, T, parval, min_w_base):
     results1 = np.zeros((d_mwp_arr.size, n_sim, q_arr.size)) # qvals
