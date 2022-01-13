@@ -5,7 +5,7 @@ import concurrent.futures
 import csv
 
 if __name__ == '__main__':
-    n_sim = 20
+    n_sim = 2
     seed = 123456
     T = 500
     min_w_base_arr = np.array([1e-14, 0.4])
