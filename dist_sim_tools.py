@@ -13,9 +13,13 @@ def run_model(arg):
 
 
 def run_mp(args):
-    with concurrent.futures.ProcessPoolExecutor() as executor:
-        X = np.array(list(executor.map(run_model, args)), dtype=object)
-    X1 = X
+    X = []
+    for arg in args:
+        x = run_model(arg)
+        X.append(x)
+    # with concurrent.futures.ProcessPoolExecutor() as executor:
+    #     X = np.array(list(executor.map(run_model, args)), dtype=object)
+    X1 = np.stack(np.asarray(X), axis=0)
     return X1
 
 def counterfact_sim(seed, ID, d_mwp_arr, n_sim, q_arr, T, parval, min_w_base):

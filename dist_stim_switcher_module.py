@@ -1,7 +1,7 @@
 from step_function_methods import run
 
 def ID0(T, d_mwp, par_val, min_w_base):
-    w_dist_mat = run(T=T, lambda_LM=par_val, min_w_par=min_w_base, d_mwp=d_mwp)
+    w_dist_mat = run(T=T, gamma_s=par_val, min_w_par=min_w_base, d_mwp=d_mwp)
     return w_dist_mat
 
 def ID1(T, d_mwp, par_val, min_w_base):
@@ -25,7 +25,7 @@ def ID5(T, d_mwp, par_val, min_w_base):
     return w_dist_mat
 
 def ID6(T, d_mwp, par_val, min_w_base):
-    w_dist_mat = run(T=T, gamma_s=par_val, min_w_par=min_w_base, d_mwp=d_mwp)
+    w_dist_mat = run(T=T, lambda_LM=par_val, min_w_par=min_w_base, d_mwp=d_mwp)
     return w_dist_mat
 
 switcher = {
