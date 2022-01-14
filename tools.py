@@ -9,7 +9,7 @@ from numba import njit
 ################## GENERAL ##################
 
 
-@njit
+
 def set_seed(seed):
     """
     This function is used of seeding the jitted part of the code...
@@ -33,7 +33,7 @@ def expectation(z, z_e, lambda_exp):
     error = z - z_e
     return z_e + lambda_exp*error
 
-@njit
+
 def vec_mat_mul(vec, mat):
     result = np.zeros(mat.shape[1])
     for j in range(mat.shape[1]):
@@ -42,7 +42,7 @@ def vec_mat_mul(vec, mat):
     return result
 
 
-@njit
+
 def get_i_int_i_skill(worker_type):
     """
     Returns indices for the bool matrix "skill_mat"
@@ -122,7 +122,7 @@ def update_dc(h_float_mat, alpha_1, alpha_2):
     h_float_mat[5] = d_c
 
 
-@njit
+
 def get_app_mat(H, f_ids, N_app):
     """
     Returns a FxH (number of firms x number of households) application matrix
@@ -142,7 +142,7 @@ def get_app_mat(H, f_ids, N_app):
     return app_mat
 
 
-@njit
+
 def get_row_share_mat(mat):
     """
     Return a matrix containing the shares of the row sums of the input matrix.
@@ -155,7 +155,7 @@ def get_row_share_mat(mat):
     return (mat.transpose()/mat.sum(axis=1)).transpose()
 
 
-@njit
+
 def get_div_mat(F, H, equity_mat, dividends):
     """
     Returns a FxH matrix showing the amount of dividends each firm owes to each household.
@@ -173,7 +173,7 @@ def get_div_mat(F, H, equity_mat, dividends):
     return div_mat
 
 
-@njit
+
 def get_emp_ids(f_ids, h_ids, emp_mat):
     """
     Returns a 1D array containing the employer ID of each household. If the household
@@ -219,7 +219,7 @@ def update_A_h(f_ids, emp_mat, h_ids, H, f_float_mat,
     h_float_mat[9, h_float_mat[9] < tol] = 0
 
 
-@njit
+
 def pay_refin_costs(weights, refin, h_float_mat, equity_mat, f_id):
     """
     Updates liquid assets and refinancing cost entry after households pay refinancing costs.
@@ -236,7 +236,7 @@ def pay_refin_costs(weights, refin, h_float_mat, equity_mat, f_id):
     equity_mat[f_id] += costs # update equity matrix
 
 
-@njit
+
 def refin_firms(rand_ids, default_f_ids, f_float_mat, netA_arr, active_arr, wealth_tot, weights,
                 default_arr, n_refin, t, h_float_mat, equity_mat, A_f):
     """
@@ -311,7 +311,7 @@ def households_refin_firms(h_float_mat, f_float_mat, active_arr, default_arr, f_
 ################## FIRMS ##################
 
 
-@njit
+
 def Update_N(f_int_mat, emp_mat, skill_mat):
     """
     Updates number of current employees.
@@ -326,7 +326,7 @@ def Update_N(f_int_mat, emp_mat, skill_mat):
     f_int_mat[2, :] = np.sum(emp_mat[:, skill_mat[1]], axis=1)
 
 
-@njit
+
 def update_W_fs(f_float_mat, h_float_mat, f_ids, skill_mat, emp_mat):
     """
     Update labor cost data of firms (average and total wage bills).
@@ -504,7 +504,7 @@ def update_d_N(f_float_mat, f_int_mat, f_ids, mu_u, mu_s, eta, default_arr):
     f_int_mat[1, def_inds] = 0
     f_int_mat[3, def_inds] = 0
 
-@njit
+
 def update_v(f_int_mat):
     """
     Updates number of open vacancies.
@@ -647,7 +647,7 @@ def update_Af(f_float_mat):
 #     return np.where(A_arr == x)[0][0]
 
 
-@njit
+
 def sample_surviving_f_id(lower_p, upper_p, active_arr, A_arr):
     percentile = rd.randint(lower_p, upper_p)  # choose percentile between lower_p and upper_p
     x = np.percentile(A_arr[active_arr], percentile)
@@ -682,7 +682,7 @@ def def_firms_pay_remaining_bills(emp_mat, f_float_mat):
     f_float_mat[18, m] = np.minimum(LA / WB, np.ones(np.sum(m)))
 
 
-@njit
+
 def def_firms_loose_employeees(default_arr, emp_mat, h_float_mat, h_bool_mat,
                                fired_time):
     """

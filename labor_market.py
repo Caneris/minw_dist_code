@@ -4,7 +4,7 @@ from tools import get_i_int_i_skill, Update_N, update_v, vec_mat_mul
 from numba import njit
 
 
-@njit
+
 def firms_fire_workers(worker_type, f_ids, h_ids, f_int_mat,
                        h_float_mat, fired_arr, emp_mat, skill_mat):
     """
@@ -48,7 +48,7 @@ def firms_fire_workers(worker_type, f_ids, h_ids, f_int_mat,
             fired_ids = emp_ids[mask]
             fired_arr[fired_ids] = True
 
-@njit
+
 def Pr_LM(w_old, w_new, lambda_LM):
     """
     Returns the probabilities that already employed workers
@@ -65,7 +65,7 @@ def Pr_LM(w_old, w_new, lambda_LM):
     result[cond] = 1 - np.exp(np.asarray([lambda_LM])*diff[cond])
     return result
 
-@njit
+
 def draw_ones(P):
     """
     Draws ones given the probabilities in array 'P'.
@@ -77,7 +77,7 @@ def draw_ones(P):
     num = rd.rand(len(P)) # draw random numbers between 0 and 1
     return np.asarray([0])*(num >= P) + np.asarray([1])*(num<P) # '1' if greater than probability, 0 otherwise.
 
-@njit
+
 def households_get_employed(h_ids, f_id, min_w, emp_row, vacancies, wages, d_wages, fired_time):
     """
     Adjusts variables after households get employed by a firm.
@@ -93,7 +93,7 @@ def households_get_employed(h_ids, f_id, min_w, emp_row, vacancies, wages, d_wag
     d_wages[h_ids] = wages[h_ids]
     fired_time[h_ids] = 0
 
-@njit
+
 def firm_employs_applicants(f_id, chosen_apps, min_w, vacancies, h_bool_mat,
                             wages, d_wages, app_mat, emp_mat, fired_time, lambda_LM):
     """
@@ -135,7 +135,7 @@ def firm_employs_applicants(f_id, chosen_apps, min_w, vacancies, h_bool_mat,
             households_get_employed(switch_id_arr, f_id, min_w, emp_row, vacancies, wages, d_wages,
                                     fired_time)
 
-@njit
+
 def firms_employ_applicants(rand_f_ids, v_arr, app_mat, m_skill, h_ids, d_wages, min_w, vacancies,
                             h_bool_mat, wages, emp_mat, fired_time, lambda_LM):
     """
@@ -159,7 +159,7 @@ def firms_employ_applicants(rand_f_ids, v_arr, app_mat, m_skill, h_ids, d_wages,
         firm_employs_applicants(f_id, chosen_apps, min_w, vacancies, h_bool_mat,
                                 wages, d_wages, app_mat, emp_mat, fired_time, lambda_LM)
 
-@njit
+
 def lm_matching(worker_type, f_ids, h_ids, h_float_mat, f_int_mat, app_mat, skill_mat,
                 min_w, h_bool_mat, emp_mat, fired_time, lambda_LM, t):
     """

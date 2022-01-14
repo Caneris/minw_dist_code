@@ -2,7 +2,7 @@ import numpy as np
 import numpy.random as rd
 from numba import njit
 
-@njit
+
 def h_buy_goods(f_ids, supply, N_good, f_float_mat, h_float_mat, h_ids,
                 demand, tol):
 
@@ -42,7 +42,7 @@ def h_buy_goods(f_ids, supply, N_good, f_float_mat, h_float_mat, h_ids,
                 demand[h_id] = 0
 
 
-@njit
+
 def goods_market_matching(h_float_mat, f_float_mat, h_ids, f_ids, N_good, tol):
     """
     Runs goods market matching.
