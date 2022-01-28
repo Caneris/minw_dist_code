@@ -149,6 +149,7 @@
       <workItem from="1639661771180" duration="30000" />
       <workItem from="1640185063415" duration="769000" />
       <workItem from="1642084853803" duration="16502000" />
+      <workItem from="1643379783343" duration="900000" />
     </task>
     <task id="LOCAL-00001" summary="simulate distributional effects">
       <created>1629895993955</created>
@@ -381,7 +382,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642175206396</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="get rid of jit">
+      <created>1643379817990</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1643379817990</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
