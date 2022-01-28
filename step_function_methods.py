@@ -6,9 +6,9 @@ from init_tools import *
 from calibration import calibrate_model
 
 
-def beginning_of_period(fired_time, emp_mat, h_float_mat, h_bool_mat, f_int_mat, skill_mat, default_arr):
+def beginning_of_period(fired_time, emp_mat, h_float_mat, h_bool_mat, f_int_mat, skill_mat):
 
-    fired_time[h_bool_mat[1]] += np.ones(np.sum(h_bool_mat[1]), dtype=np.int)
+    fired_time[h_bool_mat[1]] += np.ones(np.sum(h_bool_mat[1]), dtype=int)
     fired_workers_loose_jobs(fired_time, emp_mat, h_float_mat, h_bool_mat)
     Update_N(f_int_mat, emp_mat, skill_mat)
 
@@ -130,7 +130,7 @@ def step_function(alpha_1, alpha_2, F, H, f_float_mat, f_int_mat, h_float_mat, h
                   mu_s, nu, eta, sigma_m, sigma_w, sigma_delta, equity_mat, tol, n_refin,
                   f_ids, h_ids, data_mat, t, N_app, N_good, lambda_LM, A_f, w_dist_mat):
 
-    beginning_of_period(fired_time, emp_mat, h_float_mat, h_bool_mat, f_int_mat, skill_mat, default_arr)
+    beginning_of_period(fired_time, emp_mat, h_float_mat, h_bool_mat, f_int_mat, skill_mat)
     emp_arr = np.sum(emp_mat, axis=0, dtype=bool)
     min_w = min_w_par*np.median(h_float_mat[0, emp_arr])
     # update all wages
