@@ -131,7 +131,7 @@ def step_function(alpha_1, alpha_2, F, H, f_float_mat, f_int_mat, h_float_mat, h
                   f_ids, h_ids, data_mat, t, N_app, N_good, lambda_LM, A_f, w_dist_mat):
 
     beginning_of_period(fired_time, emp_mat, h_float_mat, h_bool_mat, f_int_mat, skill_mat, default_arr)
-    emp_arr = np.sum(emp_mat, axis=0, dtype=np.bool)
+    emp_arr = np.sum(emp_mat, axis=0, dtype=bool)
     min_w = min_w_par*np.median(h_float_mat[0, emp_arr])
     # update all wages
     x = np.maximum(h_float_mat[0, emp_arr], min_w)
@@ -172,13 +172,13 @@ def run(T = 1000, alpha_2 = 0.25, N_good = 6, m = 0.1, delta = 1, lambda_LM = 10
     data_mat = np.zeros((23, T))
     w_dist_mat = np.zeros((T, H))
     # firm data
-    default_arr = np.full(F, 0, dtype = np.bool)
+    default_arr = np.full(F, 0, dtype = bool)
     f_int_mat = np.zeros((6, F), dtype=np.int64)
     f_init_vals = np.array([y_f, y_f, W_u, W_s, W_u, W_s, 0.0, 0.0, y_f, y_f, uc, m, nu*y_f, pi_f, div_f, delta, Af, p, 1.0], dtype=np.float64)
     f_float_mat = init_float_mat(f_init_vals, F)
 
     # household data
-    h_bool_mat = np.full((2, H), 0, dtype=np.bool)
+    h_bool_mat = np.full((2, H), 0, dtype=bool)
     skill_mat = get_skill_mat(H, H_u)
     fired_time = np.zeros(H, dtype=np.int64)
     n_refin = np.zeros(T, dtype=np.int64)
@@ -188,7 +188,7 @@ def run(T = 1000, alpha_2 = 0.25, N_good = 6, m = 0.1, delta = 1, lambda_LM = 10
     # initiate employment situation by creating an employment FxH matrix
     # employed workers have value one
     emp_mat = init_emp_mat(F, H, u_r)
-    emp_arr = np.sum(emp_mat, axis=0, dtype=np.bool)
+    emp_arr = np.sum(emp_mat, axis=0, dtype=bool)
     # initiate desired wages
     h_float_mat[1,:] = np.concatenate((np.full(H_u, W_u), np.full(H_s,W_s)))
     # initiate wages
