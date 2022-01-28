@@ -11,7 +11,7 @@ def init_float_mat(init_vals, N):
 
 def init_emp_mat(F, H, u_r):
     N = np.int32(H*(1-u_r))
-    emp_matrix = np.zeros((F, H), dtype=np.bool)
+    emp_matrix = np.zeros((F, H), dtype=bool)
     rand_f_ids = rd.permutation(N)
     rand_h_ids = rd.choice(np.arange(H), N, replace = False)
 
@@ -22,7 +22,7 @@ def init_emp_mat(F, H, u_r):
 
 
 def get_skill_mat(H, H_u):
-    skill_mat = np.full((2, H), 0, dtype=np.bool)
-    skill_mat[0, 0:H_u] = np.full(H_u, True, dtype=np.bool)
+    skill_mat = np.full((2, H), 0, dtype=bool)
+    skill_mat[0, 0:H_u] = np.full(H_u, True, dtype=bool)
     skill_mat[1] = np.invert(skill_mat[0,:])
     return skill_mat
