@@ -27,7 +27,7 @@ def calibrate_model(H = 200, F = 20, Ah = 1, u_r = 0.08, mu_u = 0.3, W_u = 1, ga
     Nr = np.round(Omega*Nnr)
 
     # 3. get y
-    Y = (2**(1/rho))*Omega*mu_u*Nnr
+    Y = ((mu_u*Nr)**rho + (mu_s*Nnr)**rho)**(1/rho)
     y_f = Y/F
 
     # 4. get uc, p
