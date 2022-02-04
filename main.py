@@ -4,11 +4,11 @@ import time
 
 T = 1000
 periods = T
-H = 500
-F = 80
+H = 1000
+F = 160
 change_t = 500
 n_sim = 10
-gamma_s_arr = np.array([0.2, 0.4])
+gamma_s_arr = np.array([0.2])
 q_arr = np.linspace(0.01, 1.0, 100)
 d_mwp_arr = np.array([0.0, 0.1])
 results = np.zeros((2, q_arr.size, n_sim))
@@ -16,22 +16,22 @@ results = np.zeros((2, q_arr.size, n_sim))
 start = time.time()
 
 for i in range(d_mwp_arr.size):
-    for j in range(10):
+    for j in range(n_sim):
         seed = 1231
         rd.seed(seed)
         set_seed(seed)
-        data_mat, w_dist_mat = run(T=T, alpha_2=0.25, N_good=6, lambda_LM=10, sigma_m=0.35, sigma_w=0.40,
-                                   sigma_delta=0.0001, lambda_F=0.5, lambda_H=1.0, F=F, H=H, N_app=6, eta=1.5,
-                                   min_w_par=0.4, W_u=1, Ah=1, tol=1e-14, change_t=change_t, d_mwp=d_mwp_arr[i])
+        data_mat, w_dist_mat = run(T=T, alpha_2=0.25, N_good=4, lambda_LM=10, sigma_m=0.35, sigma_w=0.40,
+                                   sigma_delta=0.0001, lambda_F=0.5, lambda_H=1.0, F=F, H=H, N_app=4, eta=1.5,
+                                   min_w_par=1e-14, W_u=1, Ah=1, tol=1e-14, change_t=change_t, d_mwp=d_mwp_arr[i])
 
         q_mat = get_q_vals(q_arr, w_dist_mat)
-        q_vals = q_mat[-300:,:].mean(axis=0)
+        q_vals = q_mat[-400:,:].mean(axis=0)
         results[i, :, j] = q_vals
 
 end = time.time()
 print(end - start)
-q2 = results[1, :95, :].mean(axis = 1)
-q1 = results[0, :95, :].mean(axis = 1)
+q2 = results[1, 5:95, :].mean(axis = 1)
+q1 = results[0, 5:95, :].mean(axis = 1)
 plt.plot(q2 - q1)
 plt.show()
 
