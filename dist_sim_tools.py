@@ -14,7 +14,7 @@ def run_model(arg):
 
 
 def run_mp(args):
-    with concurrent.futures.ProcessPoolExecutor() as executor:
+    with concurrent.futures.ProcessPoolExecutor(max_workers=8) as executor:
         X = np.array(list(executor.map(run_model, args)), dtype=object)
     data = X
     X1 = np.stack(data[:, 0], axis=0)
