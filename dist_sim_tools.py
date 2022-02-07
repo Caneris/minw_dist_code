@@ -6,6 +6,7 @@ def run_model(arg):
     ID, q_arr, T, d_mwp, parval, gamma_s = arg
 
     data_mat, w_dist_mat = run_dist_sim_ID(ID, T, d_mwp, parval, gamma_s)
+    print('finished simID: {}'.format(ID))
 
     q_mat = get_q_vals(q_arr, w_dist_mat)
     q_vals = q_mat[-400:, :].mean(axis=0)
@@ -16,6 +17,11 @@ def run_model(arg):
 def run_mp(args):
     with concurrent.futures.ProcessPoolExecutor(max_workers=8) as executor:
         X = np.array(list(executor.map(run_model, args)), dtype=object)
+    # X = []
+    # for y in range(len(args)):
+    #     print(y)
+    #     x = run_model(args[y])
+    #     X.append(x)
     data = X
     X1 = np.stack(data[:, 0], axis=0)
     X2 = np.stack(data[:, 1], axis=0)
