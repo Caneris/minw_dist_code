@@ -1,6 +1,6 @@
 from step_function_methods import *
 import concurrent.futures
-from dist_stim_switcher_module import run_dist_sim_ID
+from dist_sim_switcher_module import run_dist_sim_ID
 
 def run_model(arg):
     ID, q_arr, T, d_mwp, parval, gamma_s = arg
