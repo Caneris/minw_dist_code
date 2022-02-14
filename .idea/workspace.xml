@@ -2,13 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e26aecd8-37b4-4684-8c59-54dbe3e03353" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/minw_dist_code.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/minw_dist_code.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calibration.py" beforeDir="false" afterPath="$PROJECT_DIR$/calibration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ofat_sim.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pre_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quasi_MC.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_OFAT.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualize_dist.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist_sim.py" beforeDir="false" afterPath="$PROJECT_DIR$/dist_sim.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist_sim_switcher_module.py" beforeDir="false" afterPath="$PROJECT_DIR$/dist_sim_switcher_module.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist_sim_tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/dist_sim_tools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ofat_results/N_app_ofat.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ofat_results/N_good_ofat.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ofat_results/lambda_LM_ofat.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ofat_results/min_w_par_ofat.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ofat_results/sigma_m_ofat.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ofat_results/sigma_w_ofat.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/step_function_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/step_function_methods.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/switcher_module.py" beforeDir="false" afterPath="$PROJECT_DIR$/switcher_module.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -420,6 +428,17 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="simulate distributional effects" />
     <MESSAGE value="change_t" />
@@ -440,7 +459,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="dist sim switcher corrected" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/minw_dist_code$dist_sim.coverage" NAME="dist_sim Coverage Results" MODIFIED="1644229822812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/minw_dist_code$dist_sim.coverage" NAME="dist_sim Coverage Results" MODIFIED="1639494828209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/minw_dist_code$ofat_sim.coverage" NAME="ofat_sim Coverage Results" MODIFIED="1639494814566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

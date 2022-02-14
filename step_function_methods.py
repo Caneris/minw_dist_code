@@ -213,3 +213,11 @@ def run(T = 1000, alpha_2 = 0.25, N_good = 4, m = 0.1, delta = 1, lambda_LM = 10
 
     # return data_mat[:,-periods:].mean(axis=1)
     return data_mat, w_dist_mat
+
+
+def run_changed_params(params):
+
+    data_mat, w_dist_mat = run(sigma_w = params["sigma_w"], lambda_LM = params["lambda_LM"], N_good = params["N"],
+                               N_app = params["N"], sigma_m = params["sigma_m"], eta = params["eta"],
+                               min_w_par = params["min_w_par"], d_mwp = params["d_mwp"])
+    return data_mat, w_dist_mat
