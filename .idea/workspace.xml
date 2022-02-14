@@ -1,22 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e26aecd8-37b4-4684-8c59-54dbe3e03353" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/minw_dist_code.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/minw_dist_code.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="e26aecd8-37b4-4684-8c59-54dbe3e03353" name="Default Changelist" comment="prepared final experiments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist_sim.py" beforeDir="false" afterPath="$PROJECT_DIR$/dist_sim.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist_sim_switcher_module.py" beforeDir="false" afterPath="$PROJECT_DIR$/dist_sim_switcher_module.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist_sim_tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/dist_sim_tools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ofat_results/N_app_ofat.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ofat_results/N_good_ofat.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ofat_results/lambda_LM_ofat.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ofat_results/min_w_par_ofat.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ofat_results/sigma_m_ofat.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ofat_results/sigma_w_ofat.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/step_function_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/step_function_methods.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/switcher_module.py" beforeDir="false" afterPath="$PROJECT_DIR$/switcher_module.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -422,7 +408,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644830776391</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="prepared final experiments">
+      <created>1644861508768</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1644861508768</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -456,7 +449,8 @@
     <MESSAGE value="corrected calibration" />
     <MESSAGE value="set up experiments" />
     <MESSAGE value="dist sim switcher corrected" />
-    <option name="LAST_COMMIT_MESSAGE" value="dist sim switcher corrected" />
+    <MESSAGE value="prepared final experiments" />
+    <option name="LAST_COMMIT_MESSAGE" value="prepared final experiments" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/minw_dist_code$dist_sim.coverage" NAME="dist_sim Coverage Results" MODIFIED="1639494828209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
