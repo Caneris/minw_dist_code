@@ -2,10 +2,6 @@ import numpy as np
 from sys import exit
 
 
-# H = 200, F = 20, u_r = 0.08, mu_u = 1, W_r = 1, gamma_s = 0.33,
-#                  m = 0.1, sigma = 0.5, delta = 1, alpha_2 = 0.25
-
-
 def calibrate_model(H = 200, F = 20, Ah = 1, u_r = 0.08, mu_u = 0.3, W_u = 1, gamma_s = 0.33, m = 0.1, eta = 0.5, delta = 1, alpha_2 = 0.1):
 
     # get elasticity parameter
